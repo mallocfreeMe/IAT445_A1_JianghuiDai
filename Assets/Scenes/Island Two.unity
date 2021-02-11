@@ -1350,6 +1350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: e0262c8c0704d4246aae66965da11af3, type: 3}
+  deathParticles: {fileID: 449697019450138573, guid: 2e9614409d2b0425fa44c8433b24bdef, type: 3}
 --- !u!1001 &826817183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3029,7 +3030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964966244, guid: d8ed8d33feac640b4a0ac5a73cf3b4c8, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 909655137525199524, guid: d8ed8d33feac640b4a0ac5a73cf3b4c8, type: 3}
       propertyPath: m_LocalPosition.x

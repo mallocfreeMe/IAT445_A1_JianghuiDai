@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Teleport : MonoBehaviour
 {
+    // if airplane exit the invisible collider
+    // then transfer the player to the corresponding scene 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Airplane"))

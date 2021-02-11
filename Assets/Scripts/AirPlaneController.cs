@@ -63,6 +63,8 @@ public class AirPlaneController : MonoBehaviour
         }
     }
 
+    // if the airplane collides with the player, then set isFlying to true
+    // and activate the camera
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
