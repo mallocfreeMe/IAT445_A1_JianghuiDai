@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fox
   - Airplane
+  - Cube
   layers:
   - Default
   - TransparentFX
