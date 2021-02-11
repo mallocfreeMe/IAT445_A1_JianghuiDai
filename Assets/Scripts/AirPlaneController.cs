@@ -10,23 +10,29 @@ public class AirPlaneController : MonoBehaviour
     public float forwardSpeed = 25f, straightSpeed = 7.5f, hoverSpeed = 5f;
     public float lookRateSpeed = 90f;
     public float rollSpeed = 90f, rollAcceleration = 3.5f;
+    public AudioClip audioClip;
 
     private bool _isFlying;
     private float _activeForwardSpeed, _activeStraightSpeed, _activeHoverSpeed;
     private float _forwardAcceleration = 2.5f, _straightAcceleration = 2f, _hoverAcceleration = 2f;
     private Vector2 _lookInput, _screeCenter, _mouseDistance;
     private float _rollInput;
+    private AudioSource _audioSource;
 
     private void Start()
     {
         _screeCenter.x = Screen.width * .5f;
         _screeCenter.y = Screen.height * .5f;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         if (_isFlying)
         {
+            // play engine sound
+            _audioSource.PlayOneShot(audioClip);
+            
             // look at mouse position
             _lookInput.x = Input.mousePosition.x;
             _lookInput.y = Input.mousePosition.y;

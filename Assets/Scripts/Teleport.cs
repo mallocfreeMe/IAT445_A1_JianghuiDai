@@ -8,9 +8,16 @@ public class Teleport : MonoBehaviour
 {
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Airplane"))
         {
-            SceneManager.LoadScene("Island Two");
+            if (SceneManager.GetActiveScene().name == "Island One")
+            {
+                SceneManager.LoadScene("Island Two");
+            }
+            else
+            {
+                SceneManager.LoadScene("Island One");
+            }
         }
     }
 }
